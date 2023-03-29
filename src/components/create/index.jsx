@@ -20,7 +20,7 @@ export const Create = ()=>{
         data.set("summary", summary)
         data.set("content", content)
         data.set("file", files[0]);
-        const response = await fetch("http://localhost:8080/createPost",{
+        const response = await fetch("https://lissaidev-api.onrender.com/createPost",{
             method:"POST",
             body: data,
             credentials: "include"

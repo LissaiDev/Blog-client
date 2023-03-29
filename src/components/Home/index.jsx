@@ -4,7 +4,7 @@ import "./index.scss"
 function Home(){
     const [data, setData] = useState([])
     const fetchData = async()=>{
-        const response = await fetch("http://localhost:8080/posts");
+        const response = await fetch("https://lissaidev-api.onrender.com/posts");
         response.json().then((data)=>{
            setData(data);
         })

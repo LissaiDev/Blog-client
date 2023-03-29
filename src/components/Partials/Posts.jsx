@@ -7,7 +7,7 @@ const Posts = ({file , title, summary, author, createdAt, _id})=>{
         <Link to={`post/${_id}`} >
             <div className="row post bg-light mb-5 py-2" >
                 <div className="col-md-5 col-11 img text-center mx-auto">
-                    <img src={"http://localhost:8080/uploads/"+file} alt="post" className="img-fluid"/>
+                    <img src={"https://lissaidev-api.onrender.com//uploads/"+file} alt="post" className="img-fluid"/>
                 </div>
                 <div className="col-md-7 col-11 d-flex text-center align-items-center">
                     <div className="">

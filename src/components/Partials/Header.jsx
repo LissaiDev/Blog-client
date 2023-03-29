@@ -5,7 +5,7 @@ function Header(){
     const {userInfo, setUserInfo}=useContext(userContext)
     useEffect(()=>{
         try{
-            fetch("http://localhost:8080/profile",{
+            fetch("https://lissaidev-api.onrender.com/profile",{
                 credentials: "include"
             })
             .then(data => data.json())
@@ -22,7 +22,7 @@ function Header(){
     },[])
     const logout= (event)=>{
         event.preventDefault()
-        fetch("http://localhost:8080/logout",{
+        fetch("https://lissaidev-api.onrender.com/logout",{
             credentials:"include",
             method: "POST"
         })
