@@ -23,7 +23,7 @@ const Post = ()=>{
                     {postData.title}
                 </h1>
                 <div className="imgpost mb-4">
-                    <img src={`https://lissaidev-api.onrender.com/${postData.file}`} alt={postData.title} className="img-fluid"/>
+                    <img src={`https://lissaidev-api.onrender.com/uploads/${postData.file}`} alt={postData.title} className="img-fluid"/>
                 </div>
                 <div className="fs-5" dangerouslySetInnerHTML={{__html:postData.content}} ></div>
             </div>
