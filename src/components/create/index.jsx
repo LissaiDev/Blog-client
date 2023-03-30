@@ -29,6 +29,7 @@ export const Create = ()=>{
         if(response.ok){
             setRedirect(true);
         }else{
+            console.log(response)
             setStatus("Algo correu mal. Tente logar novamente!")
         }
     }
