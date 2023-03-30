@@ -19,6 +19,7 @@ function Header(){
         }catch(e){
             console.log(e);
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
     const logout= (event)=>{
         event.preventDefault()
