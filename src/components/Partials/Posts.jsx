@@ -15,7 +15,7 @@ const Posts = ({file , title, summary, author, createdAt, _id})=>{
                             {title}
                         </h1>
                         <p className="text-muted">
-                            <span className="fw-bold text-black">
+                            <span className="fw-bold" style={{color: "black"}}>
                                 {author.username}
                             </span> {formatISO9075(new Date(createdAt))}
                         </p>
