@@ -6,7 +6,7 @@ const Post = ()=>{
     const [postData, setPostData] = useState([])
 
     const getPost = async ()=>{
-       const response = await fetch(`https://lissaidev-api.onrender.com/post/${id}`)
+       const response = await fetch(`http://192.168.43.70:8080/post/${id}`)
        response.json().then(data => {
         setPostData(data)
        })
@@ -23,9 +23,9 @@ const Post = ()=>{
                     {postData.title}
                 </h1>
                 <div className="imgpost mb-4">
-                    <img src={`https://lissaidev-api.onrender.com/uploads/${postData.file}`} alt={postData.title} className="img-fluid"/>
+                    <img src={`http://192.168.43.70:8080/uploads/${postData.file}`} alt={postData.title} className="img-fluid"/>
                 </div>
-                <div className="fs-5" dangerouslySetInnerHTML={{__html:postData.content}} ></div>
+                <div className="fs-5 post" dangerouslySetInnerHTML={{__html:postData.content}} ></div>
             </div>
         </>
     )

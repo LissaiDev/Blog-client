@@ -10,7 +10,7 @@ const Login = ()=>{
 
     const handleSubmit =async (event)=>{
         event.preventDefault();
-        const response =await fetch("https://lissaidev-api.onrender.com/login",{
+        const response =await fetch("http://192.168.43.70:8080/login",{
             method:"POST",
             body:JSON.stringify({username, password}),
             headers : {"Content-Type":"application/json"},

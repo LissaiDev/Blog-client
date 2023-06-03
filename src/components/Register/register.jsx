@@ -9,7 +9,7 @@ const Registro = ()=>{
     const handleSubmit = (event)=>{
         event.preventDefault();
         try{
-            fetch("https://lissaidev-api.onrender.com/register",{
+            fetch("http://192.168.43.70:8080/register",{
                 method: "POST",
                 headers : {'Content-Type':'application/json'},
                 body: JSON.stringify({username , password})

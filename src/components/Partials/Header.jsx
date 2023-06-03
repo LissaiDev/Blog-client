@@ -5,14 +5,16 @@ function Header(){
     const {userInfo, setUserInfo}=useContext(userContext)
     useEffect(()=>{
         try{
-            fetch("https://lissaidev-api.onrender.com/profile",{
+            fetch("http://192.168.43.70:8080/profile",{
                 credentials: "include"
             })
             .then(data => data.json())
             .then(response=> {
                 if(response){
+                    console.log(response);
                     setUserInfo(response)
                 }else{
+                    console.log(response);
                     setUserInfo(null)
                 }
             })
@@ -23,7 +25,7 @@ function Header(){
     },[])
     const logout= (event)=>{
         event.preventDefault()
-        fetch("https://lissaidev-api.onrender.com/logout",{
+        fetch("http://192.168.43.70:8080/logout",{
             credentials:"include",
             method: "POST"
         })
